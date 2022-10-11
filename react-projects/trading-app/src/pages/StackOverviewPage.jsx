@@ -1,8 +1,15 @@
 import React from 'react'
 
+import AutoComplete from '../components/AutoComplete'
+import StockList from '../components/StockList'
+
 const StackOverviewPage = () => {
   return (
-    <div>StackOverviewPage</div>
+    <div>
+      StackOverviewPage
+      <AutoComplete />
+      <StockList />
+    </div>
   )
 }
 
