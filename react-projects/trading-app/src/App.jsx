@@ -7,10 +7,10 @@ import StockDetailsPage from "./pages/StockDetailsPage"
 const App = () => {
   return (
     <main className='container'>
-      <Routes>
-        <Route path="/" element={<StackOverviewPage />} />
-        <Route path="/detail/:symbol" element={<StockDetailsPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<StackOverviewPage />} />
+          <Route path="/detail/:symbol" element={<StockDetailsPage />} />
+        </Routes>
     </main>
   )
 }
