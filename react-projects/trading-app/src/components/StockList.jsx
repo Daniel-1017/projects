@@ -9,7 +9,7 @@ import { WatchListContext } from '../context/watchListContext'
 
 const StockList = () => {
     const [stock, setStock] = useState([])
-    const { watchList } = useContext(WatchListContext)
+    const { watchList, deleteStock } = useContext(WatchListContext)
     const navigate = useNavigate()
 
     const changeColor = (change) => {
@@ -93,7 +93,13 @@ const StockList = () => {
                                 <td>{stock.data.h}</td>
                                 <td>{stock.data.l}</td>
                                 <td>{stock.data.o}</td>
-                                <td>{stock.data.pc}</td>
+                                <td>
+                                    {stock.data.pc}
+                                    <button className="btn btn-danger btn-sm ml-3 d-inline-block delete-button" onClick={(e) => {
+                                        e.stopPropagation()
+                                        deleteStock(stock.symbol)
+                                    }}>Remove</button>
+                                </td>
                             </tr>
                         ))
                     }

@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const WatchListContext = createContext()
 
 export const WatchListContextProvider = (props) => {
-    const [watchList, setWatchList] = useState(["GOOGLE", "MFST", "AMZN"])
+    const [watchList, setWatchList] = useState(["GOOGL", "MSFT", "AMZN"])
 
     const addStock = stock => {
         if (watchList.indexOf(stock) === -1) {
@@ -15,7 +15,7 @@ export const WatchListContextProvider = (props) => {
 
     const deleteStock = stock => {
         setWatchList(currWatchList => {
-            return currWatchList.filter(watchListStock !== stock)
+            return currWatchList.filter(watchListStock => watchListStock !== stock)
         })
     }
 
