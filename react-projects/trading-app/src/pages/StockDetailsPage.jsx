@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 
 import finnHub from '../apis/finnHub'
 
+import StockChar from '../components/StockChar'
+
 const formatData = (data) => {
   return data.t.map((el, idx) => {
     return {
@@ -82,7 +84,13 @@ const StockDetailsPage = () => {
   }, [symbol])
 
   return (
-    <div>StockDetailsPage {symbol}</div>
+    <div>
+      {chartData && (
+        <div>
+          <StockChar chartData={chartData} symbol={symbol} />
+        </div>
+      )}
+    </div>
   )
 }
 
