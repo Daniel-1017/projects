@@ -10,7 +10,7 @@ const formatData = (data) => {
   return data.t.map((el, idx) => {
     return {
       x: el * 1000,
-      y: data.c[idx]
+      y: Math.floor(data.c[idx])
     }
   })
 }
