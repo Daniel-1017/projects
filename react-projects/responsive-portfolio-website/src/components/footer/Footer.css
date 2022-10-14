@@ -31,3 +31,35 @@ footer a {
   gap: 1rem;
   margin-bottom: 4rem;
 }
+
+.footer__socials a {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  bottom: 1px solid transparent;
+  display: flex;
+}
+
+.footer__socials a:hover {
+  background-color: transparent;
+  color: var(--color-bg);
+  border-color: var(--color-bg);
+}
+
+.footer__copyright {
+  margin-bottom: 4rem;
+  color: var(--color-bg);
+}
+
+/* ========== MEDIA QUERIES (SMALL DEVICES) ========== */
+@media screen and (max-width: 600px) {
+  .permalinks {
+    flex-direction: column;
+    grid-template: 1.5rem;
+  }
+
+  .footer__socials {
+    margin-bottom: 2.6rem;
+  }
+}
