@@ -1,8 +1,14 @@
 import React from "react"
+import { Route, Routes } from "react-router-dom"
+import Layout from "./components/Layout"
 import "./App.scss"
 
 const App = () => {
-  return <div>App</div>
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />} />
+    </Routes>
+  )
 }
 
 export default App
