@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #333;
+}
+
+#canvas1 {
+  background-color: blue;
+  position: absolute;
+}
+
+.controls {
+  position: absolute;
+  z-index: 100;
+}
