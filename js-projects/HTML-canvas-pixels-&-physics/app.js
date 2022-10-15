@@ -4,8 +4,6 @@ window.addEventListener("load", function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  const image1 = document.getElementById("image1");
-
   class Particle {
     constructor(effect) {
       this.effect = effect;
@@ -24,6 +22,11 @@ window.addEventListener("load", function () {
       this.width = width;
       this.height = height;
       this.particlesArray = [];
+      this.image = document.getElementById("image1");
+      this.centerX = this.width * 0.5;
+      this.centerY = this.height * 0.5;
+      this.x = this.centerX - this.image.width * 0.5;
+      this.y = this.centerY - this.image.height * 0.5;
     }
 
     init() {
@@ -34,6 +37,7 @@ window.addEventListener("load", function () {
 
     draw(context) {
       this.particlesArray.forEach((particle) => particle.draw(context));
+      context.drawImage(this.image, this.x, this.y);
     }
   }
 
