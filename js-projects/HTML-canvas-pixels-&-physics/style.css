@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -19,4 +21,21 @@ body {
 
 img {
   display: none;
+}
+
+button {
+  padding: 10px;
+  font-size: 30px;
+  margin: 20px;
+  font-family: "Bangers", cursive;
+  color: #fff;
+  background-color: #000;
+  border: 3px solid #000;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
 }
