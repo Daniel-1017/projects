@@ -1,7 +1,13 @@
+import { Fragment } from "react"
+import Sidebar from "../Sidebar/Sidebar"
 import "./index.scss"
 
 const Layout = () => {
-  return <div>Layout</div>
+  return (
+    <Fragment>
+      <Sidebar />
+    </Fragment>
+  )
 }
 
 export default Layout
