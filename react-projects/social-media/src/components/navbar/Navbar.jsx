@@ -2,7 +2,7 @@ import React from "react";
 import {
   HomeOutlined,
   DarkModeOutlined,
-  WbSunnyOutlined,
+  // WbSunnyOutlined,
   GridViewOutlined,
   NotificationsOutlined,
   EmailOutlined,
