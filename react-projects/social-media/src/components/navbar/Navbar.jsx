@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   HomeOutlined,
   DarkModeOutlined,
-  // WbSunnyOutlined,
+  WbSunnyOutlined,
   GridViewOutlined,
   NotificationsOutlined,
   EmailOutlined,
@@ -12,8 +12,11 @@ import {
 
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 const Navbar = () => {
+  const { toggleDarkMode, darkMode } = useContext(DarkModeContext);
+
   return (
     <div className="navbar">
       <div className="left">
@@ -21,7 +24,11 @@ const Navbar = () => {
           <span>lamasocial</span>
         </Link>
         <HomeOutlined />
-        <DarkModeOutlined />
+        {darkMode ? (
+          <WbSunnyOutlined onClick={toggleDarkMode} />
+        ) : (
+          <DarkModeOutlined onClick={toggleDarkMode} />
+        )}
         <GridViewOutlined />
         <div className="search">
           <SearchOutlined />
