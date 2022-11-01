@@ -18,12 +18,11 @@ import { AuthContext } from "../../context/authContext";
 const Navbar = () => {
   const { toggleDarkMode, darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
-  console.log(currentUser);
 
   return (
     <div className="navbar">
       <div className="left">
-        <Link to="/home" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <span>lamasocial</span>
         </Link>
         <HomeOutlined />
