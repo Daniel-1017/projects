@@ -24,9 +24,10 @@ import {
 } from "./pages";
 
 import "./App.css";
+import { PdfTrueTypeFont } from "@syncfusion/ej2/pdf-export";
 
 const App = () => {
-  const activeMenu = false;
+  const activeMenu = true;
 
   return (
     <div>
