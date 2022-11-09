@@ -22,12 +22,13 @@ import {
   ColorMapping,
   Editor,
 } from "./pages";
+import { PdfTrueTypeFont } from "@syncfusion/ej2/pdf-export";
+import { useStateContext } from "./contexts/ContextProvider";
 
 import "./App.css";
-import { PdfTrueTypeFont } from "@syncfusion/ej2/pdf-export";
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
